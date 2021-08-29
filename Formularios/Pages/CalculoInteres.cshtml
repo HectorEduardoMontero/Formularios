@@ -1,0 +1,26 @@
+﻿@page
+@model Formularios.Pages.CalculoInteresModel
+@{
+}
+
+
+<form method="get">
+    <label>Monto</label>
+    <input type="text" name="monto" value="" />
+    <label>Cuotas</label>
+    <input type="text" name="cuotas" value="" />
+    <label>Porcentajes Anual</label>
+    <input type="text" name="Porcentaje" value="" />
+    <input type="submit" value="Calcular" />
+
+
+</form>
+
+
+
+<h1> Detalle de Prestamos </h1>
+<p>Monto solicitado:@Model.Monto </p>
+<p>porcentaje anual:@Model.Porcentajes </p>
+<p> Cuotas Mensual: @Model.Cuotas</p>
+<p> Interes: @Model.Interes</p>
+<p> Deuta Total: @Model.Deuda</p>
