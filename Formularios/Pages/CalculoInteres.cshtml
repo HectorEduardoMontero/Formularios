@@ -4,6 +4,7 @@
 }
 
 
+
 <form method="get">
     <label>Monto</label>
     <input type="text" name="monto" value="" />
@@ -18,9 +19,19 @@
 
 
 
+
 <h1> Detalle de Prestamos </h1>
 <p>Monto solicitado:@Model.Monto </p>
 <p>porcentaje anual:@Model.Porcentajes </p>
 <p> Cuotas Mensual: @Model.Cuotas</p>
-<p> Interes: @Model.Interes</p>
+<p> Interes:@String.Format("{0:##:0:00}", @Model.Interes)</p>
 <p> Deuta Total: @Model.Deuda</p>
+
+
+
+
+
+
+
+
+

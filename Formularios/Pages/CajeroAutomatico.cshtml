@@ -1,0 +1,51 @@
+﻿@page
+@model Formularios.Pages.CajeroAutomaticoModel
+@{
+
+
+
+
+}
+
+
+
+
+
+<div>
+
+    <h2>Dinero Disponible</h2>
+    <p>Billete de Mil (1000): @Model.Bi_1000</p>
+    <p>Billete de Quinientos (500): @Model.Bi_500</p>
+    <p>Billete de Cien (100): @Model.Bi_100</p>
+
+</div>
+<div>
+    <form method="get">
+
+        <label for="Banco">
+            Seleccione el Banco
+
+        </label>
+        <select name="Banco">
+            @foreach (var Banco in Model.Bancos)
+            {
+                <option value="@Banco">@Banco</option>
+            }
+
+        </select>
+        <label for="Monto"> Monto a Retirar </label>
+        <input type="number" name="Monto" placeholder="Digite Monto" />
+
+        <input type="submit" name="name" value="Retirar" />
+
+
+        <h3>@Model.Mensajeerror</h3>
+
+
+
+
+    </form>
+   
+</div>
+
+
